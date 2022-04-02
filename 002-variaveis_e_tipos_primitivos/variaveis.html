@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+</head>
+<body>
+    <h1>Aula 2 - Variáveis</h1>
+    
+    <script>
+        /* Em JS pode-se utilizar as palavras var ou let para declarar variáveis, ex:
+            var nome = "Daniel"
+
+            Não é definido um tipo primitivo para criação, a variável pode receber outros
+            tipos e mudar automaticamente, ex:
+            nome = 2
+
+            podemos ver o tipo com o comando typeof 'variável'
+        */
+
+        /* Variáveis podem começar com uma (letra) ou ($) ou (_), não podem começar
+        com números, JS é case sensitive! */
+
+        /* Pode-se utilizar acentos e símbolos para nomear variáveis, não
+        é possível usar palavras reservadas */
+
+        
+        // TIPOS PRIMITIVOS PRIMORDIAIS string, number e boolean
+
+        /* Aspas (string) que podem ser utilizadas em JS (há diferenças entre cada):
+            "" - String
+            
+            '' - String - No caso dessa e da anterior, casos onde ocorram de usar as duas juntas, ex: "Nome 'nome'"
+            
+            `` - Os backticks delimitam templates (template strings), nas quais a linguagem é capaz de interpolar
+            variáveis e expressões, inclusive pode conter quebras de linha, ex:
+
+            var a = 5;
+            var b = 10;
+            alert(`A soma é: ${a + b}`)
+
+        */
+
+        /* inteiro, float, double, ... em JS são todos do tipo (number) */
+
+        /* true e false continuam sendo (boolean) */
+
+        // ------------------------------------------------------------------------
+
+        // Salvando valor em variável
+        var nome = window.prompt('Qual é seu primeiro nome?')
+        // Utilizando a variável em um alert
+        window.alert('Olá ' + nome + '!')
+        document.write('<h2>O nome ' + nome.toLocaleUpperCase() + ' contém ' + nome.length + ' letras.</h2>') // Printa no HTML
+
+        // Casting para receber um number ao invés de string
+        var n1 = Number.parseInt(window.prompt('Informe um valor inteiro')) // n1 vai receber apenas um valor interio
+        var n2 = Number(window.prompt('Informe outro valor')) // n2 vai poder receber int ou float Number é quem decide
+        var resultado = n1 + n2
+        window.alert(`O resultado da soma entre os dois números é:  ${resultado}`)
+
+        // Conversão para string utilizar String() ou .toString()
+    </script>
+</body>
+</html>
