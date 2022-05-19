@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Testando a diferenca entre var, let e const<h1>
+
+    <script>
+        var a = "A é uma variável declarada com var" // Faz a declaração de uma variável global
+        const c = "C é uma constante declarada com const" // Declara uma constante (não global)
+
+        if(true) {
+            let b = "B é uma variável declarada com let"// Let faz com que a variável exista apenas dentro do escopo em que foi declarada e nos escopos aninhados
+            document.write(`Dentro do IF - ${a}<br />`)
+            a = 12
+
+            if(true) {
+                document.write(`${b}<br />`)
+                //const d = 1
+            }
+        }
+
+        document.write(`${a}<br />`)
+        document.write(`${c}`)
+        document.write(`${d}`)
+    </script>
+</body>
+</html>

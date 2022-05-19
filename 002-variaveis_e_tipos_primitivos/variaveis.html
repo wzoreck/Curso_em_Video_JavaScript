@@ -60,6 +60,8 @@
         var n2 = Number(window.prompt('Informe outro valor')) // n2 vai poder receber int ou float Number é quem decide
         var resultado = n1 + n2
         window.alert(`O resultado da soma entre os dois números é:  ${resultado}`)
+        // Apresentando 3 casas decimais após a virgula e substituindo o ponto por virgula
+        window.alert(`O resultado da soma entre os dois números é:  ${resultado.toFixed(3).replace('.', ',')}`)
 
         // Conversão para string utilizar String() ou .toString()
     </script>
