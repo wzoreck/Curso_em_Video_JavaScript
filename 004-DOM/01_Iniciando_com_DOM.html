@@ -5,9 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciando estudos com DOM</title>
+    <style>
+        body {
+            background-color: rgba(80, 172, 179, 0.603);
+            font: normal 14pt Arial;
+        }
+    </style>
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
-    
+    <!-- DOM - Document Object Model (Está presente quando usamos JS no navegador) -->
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div>Clique aqui</div>
+
+    <script>
+        // Exemplo da árvore DOM
+        // window.document.body
+        window.document.write('Esse texto foi escrito manipulando a árvore DOM <br />')
+        window.document.write('Esse documento usa o charset: ' + window.document.charset)
+        window.document.write('<br />A URL dessa página é: ' + window.document.URL)
+
+        // Selecionando elementos "nós" da árvore DOM (Marca, ID, Nome, Classe, Seletor)
+        // Por Marca (Tag)
+        var p1 = window.document.getElementsByTagName('p')[0] // o [0] é para indicar o primeiro <p> já que pega todas as tags <p>
+        window.document.write('<br />O texto da primeira tag < p > é: ' + p1.innerText)
+        p1.style.color = 'gray'
+
+        // Alterando a cor de fundo da página através do elemento body
+        var body = window.document.body
+        body.style.background = 'pink'
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.write('<br />Conteúdo  do segundo parágrafo com seus elementos/tags aninhados: ' + p2.innerHTML) // Nesse caso o <strong>
+
+    </script>
 </body>
 </html>
