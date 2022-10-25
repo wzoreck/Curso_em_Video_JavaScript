@@ -19,6 +19,8 @@
     <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
     <div>Clique aqui</div>
 
+    <p id="lorem1">Lorem ipsum 1</p>
+
     <script>
         // Exemplo da árvore DOM
         // window.document.body
@@ -39,6 +41,16 @@
         var p2 = window.document.getElementsByTagName('p')[1]
         window.document.write('<br />Conteúdo  do segundo parágrafo com seus elementos/tags aninhados: ' + p2.innerHTML) // Nesse caso o <strong>
 
+        // Por ID
+        var p3 = window.document.getElementById('lorem1')
+        window.document.write('<br /><br />Texto do terceiro parágrafo: ' + p3.innerText)
+        p3.innerText = 'Alterdo o texto...'
+
+        // Por Classe vale a mesma regra dos anteriores...
+        
+        // Por Seletor
+        var p_com_seletor = window.document.querySelector('p#lorem1') // Sintax do CSS | # ID no CSS | . Classe no CSS
+        window.document.write('<br /><br />Texto do terceiro parágrafo: ' + p_com_seletorf.innerText)
     </script>
 </body>
 </html>
